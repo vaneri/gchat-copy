@@ -116,9 +116,11 @@ function main() {
         .forEach(
             function(e,t,i){
                 var copy = e.querySelector('.gchat-xtra-copy');
+                
                 if(e.getAttribute("data-topic-id") && !copy){
+                    var threadText = document.querySelectorAll("c-wiz[data-topic-id]")[i]
                     var copyButton = document.createElement("div");
-                    copyButton.className="gchat-xtra-copy";
+                    copyButton.className="gchat-xtra-copy";                   
                     copyButton.innerHTML = `
                         Copy thread link
                     `;
